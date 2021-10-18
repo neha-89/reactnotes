@@ -1,11 +1,11 @@
 import React, { useState } from "react" ;
 
 const HookStateArray = ()=>{
-   const [items,setitems] =useState([]);
+   const [items,setItems] =useState([]);
 
    const addItem = ()=>{
+    setItems([...items, ])
 
-    
    }
     return(
         <div>
