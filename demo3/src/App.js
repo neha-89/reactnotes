@@ -2,6 +2,8 @@ import React,{useReducer}  from 'react';
 import ComponentA from './components/ComponentA';
 import ComponentB from './components/ComponentB';
 import ComponentC from './components/ComponentC';
+import DataFetching1 from './components/DataFetching1';
+import DataFetchingtwo from './components/Datafetchingtwo';
 import './App.css';
 
 export const CounterContext = React.createContext();
@@ -26,6 +28,8 @@ function App() {
   
     <CounterContext.Provider value ={{counterState:count ,counterDispatch:dispatch}}>
    <div className="App">
+     <DataFetching1 />
+     <DataFetchingtwo />
      Count: {count}
      <ComponentA />
      <ComponentB />
