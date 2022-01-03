@@ -22,18 +22,34 @@ const data = [
 ]
 
 function App() {
-  const [display , setDisplay] = useState(true);
-  const [hide,setHide] = useState(false);
 
-const handleClick = ()=>{
+  const white = require('./images/white.png')
+const black = require('./images/black.png')
+const shirts = { white, black }
+Now bind the selected T-Shirt to a state's property and pass it as src:
+
+const Shirts = () =>{
+    const [selected, setSelected] = useState(shirts.white)
+
+   return(
+       <>
+           <img src={selected} alt='shirt' />
+           <button onClick={() => setSelected(shirts.black)}> Click</button>
+       </>
+   )
 }
-  return (
-    <div className="App">
-     <img src=""/>
+//   const [display , setDisplay] = useState(true);
+//   const [hide,setHide] = useState(false);
+
+// const handleClick = ()=>{
+// }
+//   return (
+//     <div className="App">
+//      <img src=""/>
     
-     <button onClick={handleClick}>Toggle</button>
-    </div>
-  );
+//      <button onClick={handleClick}>Toggle</button>
+//     </div>
+//   );
    
 }
 
