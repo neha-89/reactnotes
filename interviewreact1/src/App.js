@@ -26,7 +26,7 @@ function App() {
   const white = require('./images/white.png')
 const black = require('./images/black.png')
 const shirts = { white, black }
-Now bind the selected T-Shirt to a state's property and pass it as src:
+//Now bind the selected T-Shirt to a state's property and pass it as src:
 
 const Shirts = () =>{
     const [selected, setSelected] = useState(shirts.white)
@@ -52,5 +52,14 @@ const Shirts = () =>{
 //   );
    
 }
+var MyIconButton= React.createClass({
+  render: function(){
+      var pic= this.props.pressed? this.props.onpic : this.props.offpic
+      return <img 
+          src={pic} 
+          onClick={this.props.tuggleSelection}  //updateFilter is wierd name
+      />
+  }
+})
 
 export default App;
