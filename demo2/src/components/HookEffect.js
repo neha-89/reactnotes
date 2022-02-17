@@ -5,7 +5,7 @@
 //useEffect is writtern inside the functional component so that we can easily access the props and state without having to write the extra code.
 // conditionaly run effect so that it won't create a performance problem and to do so pass the second parameter to useeffect which can be prop or state.
 //run effect only once and to do so we pass an empty array as second parameter or to the dependency array but actually we are telling it to ignore it for further render.
-//useEffect is to use fectch data from an API(use axios for get request)
+//useEffect is to use fetch data from an API(use axios for get request)
 import React, { useEffect, useState } from "react";
 
 
